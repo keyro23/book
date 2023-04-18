@@ -18,14 +18,15 @@
 {% block style %}{% endblock style %}
 </style>
 <body>
-
+   <!-- rgb(187, 200, 177) -->
+    
   <div class="header" style="
-  background: rgb(187, 200, 177) url('../static/img/pst.jpg') no-repeat fixed center
+  background: #080808d5  no-repeat fixed center
   {% if "appointment" in request.path %}
   max-height:300px!important;min-height:300px!important;
   {% endif %}
   ">
-    
+  
     <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
         <div class="container"><a class="navbar-brand" href="{% url 'home' %}">Appostle</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
@@ -40,9 +41,6 @@
                     </li>
                     <li class="nav-item" role="presentation">
                         <a class="nav-link active" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link active" href="{%url 'blog' %}">Blog</a>
                     </li>
                     
                     <li class="nav-item" role="presentation">
@@ -63,13 +61,23 @@
                   </a>
                   <span class="badge badge-danger">{{count}}</span>
                 </li>
-                  
+                
          
                 </ul>
             </div>
         </div>
     </nav>
    
+   <h1 align="center"><font color="red"> MY LIFESTYLE </font></h1>
+   <h3 align="center"> hgdfegdrfgnhmjmhngfvdsa
+    <br>ergfthngtrfe
+    gtrfefrgnhgtredw
+    fgrfewqerfgthyghgrfedwf</h3>
+    <br>
+
+ 
+    <div style="text-align: center;"><img src="{% static 'img/service1.jpg' %}" width="500" height="" alt="loading..." /></div>
+
    {% block cta %}{% endblock cta %}
 </div>
 
@@ -84,3 +92,4 @@
 </body>
 
 </html>
+

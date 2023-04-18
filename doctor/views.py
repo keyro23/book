@@ -8,6 +8,7 @@ from django.contrib import messages
 from .models import Appointment
 from django.views.generic import ListView
 import datetime
+from django.contrib.auth.mixins import UserPassesTestMixin
 from django.template import Context
 from django.template.loader import render_to_string, get_template
 
@@ -28,6 +29,10 @@ class HomeTemplateView(TemplateView):
         )
         email.send()
         return HttpResponse("Email sent successfully!")
+
+
+
+
 
 
 class AppointmentTemplateView(TemplateView):
@@ -52,6 +57,9 @@ class AppointmentTemplateView(TemplateView):
 
         messages.add_message(request, messages.SUCCESS, f"Thanks {fname} for making an appointment, we will email you ASAP!")
         return HttpResponseRedirect(request.path)
+def blog(request):
+    return render(request, "blog.html")
+
 
 class ManageAppointmentTemplateView(ListView):
     template_name = "manage-appointments.html"
@@ -95,3 +103,8 @@ class ManageAppointmentTemplateView(ListView):
             "title":"Manage Appointments"
         })
         return context
+
+
+def home(request):
+
+    return render(request, "home.html")

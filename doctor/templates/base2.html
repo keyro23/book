@@ -20,13 +20,14 @@
 <body>
 
   <div class="header" style="
-  background: rgb(187, 200, 177) url('../static/img/pst.jpg') no-repeat fixed center
+  background: rgb(187, 200, 177) url('../static/img/pt.jpg') no-repeat fixed center
   {% if "appointment" in request.path %}
   max-height:300px!important;min-height:300px!important;
   {% endif %}
   ">
     
     <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+        <div style="text-align: left;"> <img src="{% static "img/lg.png" %}"width="100" height="" alt="loading..." /></div>
         <div class="container"><a class="navbar-brand" href="{% url 'home' %}">Appostle</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
                 <span class="sr-only">Toggle navigation</span>
@@ -69,12 +70,33 @@
             </div>
         </div>
     </nav>
+     {% block content %}
+        
+        <body>
+
+
+         <div class="container mx-0 px-4 px-lg-5">
+            <!-- Heading Row-->
+            <div class="row gx-4 gx-lg-5 align-items-center my-5">
+                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" width="500" lenth="200" src="{% static "img/c.jpg" %}" alt="loading..." /></div>
+                <div class="col-lg-5">
+                    <h1 class="font-weight-light" align="rightr">  <font color="Deeppink"><strong>ZION WORSHIPPERS MINISTRY</strong></font> </h1>
+                    
+                    <p> For you to get more content about success and ways of life, KEYRO guarantees 100% help and way out of what you need right here in this platform. Checkout on your niche and make it .</p>
+                    <a class="btn btn-primary" href="{{'aboutus'}}">FIND NOW!</a>
+                </div>
+            </div>
+            </div>
+            <!-- Call to Action-->
+            <div class="card text-white bg-secondary my-5 py-4 text-center">
+                <div class="card-body"><p class="text-white m-0">  <font color="Deeppink"><strong>For Your financial freedom KEYRO has got you covered. Explore this platform to make income instantly! </strong></font></p></div>
+            </div>
    
    {% block cta %}{% endblock cta %}
-</div>
 
 
-    {% block content %}{% endblock content %}
+
+{% endblock content %}
 
   <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
   

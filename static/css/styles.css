@@ -3,7 +3,7 @@
 ##############*/
 
 .header {
-    background: rgb(177, 177, 177) url("img/header.png") no-repeat fixed center; 
+    background: rgb(68, 46, 90)("img/header.png") no-repeat fixed center; 
     min-height: 1000px;
     font-family:'Source Sans Pro', sans-serif;
   }
@@ -92,7 +92,7 @@
   .header .navbar .navbar-nav > li > .dropdown-menu {
     margin-top:-5px;
     box-shadow:0 4px 8px rgba(0,0,0,.1);
-    background-color:#fff;
+    background-color:rgb(228, 125, 228);
     border-radius:2px;
   }
   
@@ -102,7 +102,7 @@
   }
   
   .header .navbar .dropdown-menu .dropdown-item:focus, .header .navbar .dropdown-menu .dropdown-item:hover {
-    background:#ebeff1;
+    background:#4292b9;
   }
   
   .header .action-button, .header .action-button:not(.disabled):active {
@@ -172,7 +172,7 @@
   }
   
   .header .hero p {
-    color:rgba(255,255,255,0.8);
+    color:rgba(239, 234, 240)
     font-size:20px;
     margin-bottom:30px;
     font-weight:300;
@@ -211,7 +211,7 @@
   
   .header .iphone-mockup .screen:before {
     content:'';
-    background-color:#fff;
+    background-color:rgb(221, 35, 190);
     position:absolute;
     width:70%;
     height:140%;
@@ -226,7 +226,7 @@
 ##############*/
 
   .carousel .carousel-item {
-    color: #999;
+    color: rgb(199, 32, 135);
     font-size: 14px;
     text-align: center;
     overflow: hidden;
@@ -344,7 +344,7 @@
     font-size: 14px;
   }
   .contact-map {
-    background-color: #ededed;
+    background-color: #a664af;
   }
   
   .title-box .border,.btn-primary,.back-to-top,
